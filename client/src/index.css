@@ -1,0 +1,368 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode (not used by default) */
+.light {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 262 80% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 284 70% 50%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 204 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+/* Dark mode - Gaming theme colors */
+:root, .dark {
+  --background: 240 10% 3.9%; /* Deep gaming dark background */
+  --foreground: 0 0% 98%; /* Clean white text */
+  --muted: 240 5% 15%; /* Slightly lighter muted background */
+  --muted-foreground: 220 10% 70%; /* Better legibility for muted text */
+  
+  /* Card with subtle blue tint for gaming aesthetics */
+  --card: 235 12% 10%;
+  --card-foreground: 0 0% 98%;
+  
+  /* Popover styling */
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  
+  /* Subtle borders - not too harsh */
+  --border: 240 6% 18%;
+  --input: 240 5% 18%;
+  
+  /* Primary: Gaming purple */
+  --primary: 265 90% 55%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary: Electric blue */
+  --secondary: 200 90% 55%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Accent: Vibrant pink for energy */
+  --accent: 320 90% 60%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* Destructive: Vivid red */
+  --destructive: 0 95% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Glowing ring effect */
+  --ring: 265 90% 55%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Scrollbar styling for gaming theme */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+    border: 2px solid hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-primary/30 text-white;
+  }
+  
+  /* Base body style with high-tech gaming font */
+  body {
+    font-family: 'Rajdhani', sans-serif;
+    @apply antialiased bg-background text-foreground;
+    background-image: 
+      radial-gradient(hsla(var(--primary) / 0.05) 1px, transparent 1px),
+      radial-gradient(hsla(var(--primary) / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+  }
+  
+  /* Focus style for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary/70 ring-offset-2 ring-offset-background;
+  }
+  
+  /* Headings with gradient highlight and high-tech font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+    letter-spacing: -0.01em;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Logo text styling */
+  .logo-text {
+    font-family: 'Orbitron', sans-serif;
+    @apply font-extrabold tracking-wider;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Navigation links */
+  nav a {
+    font-family: 'Rajdhani', sans-serif;
+    @apply font-medium tracking-wide;
+  }
+  
+  /* Buttons with high-tech font */
+  button, .btn {
+    font-family: 'Rajdhani', sans-serif;
+    @apply font-medium tracking-wide;
+  }
+}
+
+/* Advanced animations for the gaming theme */
+@layer utilities {
+  /* Neon glow effects - multiple colors for different elements */
+  .neon-glow {
+    box-shadow: 0 0 5px theme('colors.purple.500'),
+                0 0 10px theme('colors.purple.500'),
+                0 0 15px theme('colors.purple.500');
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .neon-glow:hover {
+    box-shadow: 0 0 10px theme('colors.purple.500'),
+                0 0 20px theme('colors.purple.500'),
+                0 0 30px theme('colors.purple.500');
+  }
+  
+  .neon-glow-blue {
+    box-shadow: 0 0 5px theme('colors.blue.500'),
+                0 0 10px theme('colors.blue.500'),
+                0 0 15px theme('colors.blue.500');
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .neon-glow-blue:hover {
+    box-shadow: 0 0 10px theme('colors.blue.500'),
+                0 0 20px theme('colors.blue.500'),
+                0 0 30px theme('colors.blue.500');
+  }
+  
+  .neon-glow-cyan {
+    box-shadow: 0 0 5px theme('colors.cyan.500'),
+                0 0 10px theme('colors.cyan.500'),
+                0 0 15px theme('colors.cyan.500');
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 5px 15px rgba(123, 31, 162, 0.2),
+                0 10px 30px rgba(72, 1, 255, 0.15);
+  }
+  
+  /* Text gradient animations - different color schemes */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400;
+    background-size: 200% auto;
+    animation: textShine 5s linear infinite;
+  }
+  
+  .text-gradient-gaming {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500;
+    background-size: 200% auto;
+    animation: textShine 4s linear infinite;
+  }
+  
+  .text-gradient-cyber {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600;
+    background-size: 200% auto;
+    animation: textShine 6s linear infinite;
+  }
+  
+  @keyframes textShine {
+    to {
+      background-position: 200% center;
+    }
+  }
+  
+  /* 3D perspective container */
+  .perspective {
+    perspective: 1000px;
+  }
+  
+  /* Hover floating effect with shadow enhancement */
+  .hover-float {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-float:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.2),
+                0 8px 10px -6px rgba(124, 58, 237, 0.1);
+  }
+  
+  /* Pulse animation with glow */
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    50% {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+    100% {
+      transform: scale(1);
+      filter: brightness(1);
+    }
+  }
+  
+  /* Game card flip */
+  .flip-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* 3D Transform Effects */
+  .transform-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+  
+  .transform-3d:hover {
+    transform: translateZ(20px) rotateX(5deg) rotateY(5deg);
+  }
+  
+  /* Glowing button for primary actions */
+  .btn-glow {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .btn-glow::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0%,
+      rgba(124, 58, 237, 0.1) 25%,
+      rgba(124, 58, 237, 0.3) 50%,
+      rgba(124, 58, 237, 0.1) 75%,
+      transparent 100%
+    );
+    z-index: -1;
+    animation: rotate 4s linear infinite;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Reflection effect for gaming products */
+  .reflection {
+    position: relative;
+  }
+  
+  .reflection::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0)
+    );
+    transform: translateY(-100%);
+    animation: reflect 3s ease-in-out infinite;
+  }
+  
+  @keyframes reflect {
+    0%, 100% {
+      transform: translateY(-100%);
+    }
+    50% {
+      transform: translateY(100%);
+    }
+  }
+}
+
+/* Currency display for INR */
+.price-inr::before {
+  content: "₹";
+  margin-right: 1px;
+}
+
