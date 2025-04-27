@@ -345,23 +345,23 @@ export default function HomePage() {
           >
             {[
               {
-                name: "Alex Thompson",
-                role: "Pro Gamer",
-                avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+                name: "Arman",
+                role: "Buyer",
+                avatar: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-nyajl&psig=AOvVaw2tmPTdSezZGR8VMvwv4q8B&ust=1745865984374000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjO_OXv-IwDFQAAAAAdAAAAABAJ",
                 content: "The HyperX Cloud III headset completely transformed my gaming experience. Incredible sound separation helps me locate enemies with precision, and the comfort is unmatched even during 8-hour tournaments.",
                 rating: 5
               },
               {
-                name: "Sophia Chen",
-                role: "Twitch Streamer",
-                avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+                name: "Arman",
+                role: "Buyer",
+                avatar: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-nyajl&psig=AOvVaw2tmPTdSezZGR8VMvwv4q8B&ust=1745865984374000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjO_OXv-IwDFQAAAAAdAAAAABAJ",
                 content: "Legion Pro 7i is an absolute beast! Handles my gaming and streaming setup flawlessly. The RGB lighting and cooling system are top-notch, and my viewers always comment on the crisp gameplay quality.",
                 rating: 5
               },
               {
-                name: "Marcus Williams",
-                role: "Casual Gamer",
-                avatar: "https://randomuser.me/api/portraits/men/22.jpg",
+                name: "Dakash",
+                role: "Buyer",
+                avatar: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngegg.com%2Fen%2Fpng-nyajl&psig=AOvVaw2tmPTdSezZGR8VMvwv4q8B&ust=1745865984374000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjO_OXv-IwDFQAAAAAdAAAAABAJ",
                 content: "The Xbox Elite controller was totally worth the investment. The customizable buttons have improved my gameplay dramatically. The build quality is exceptional and the battery life is impressive.",
                 rating: 4.5
               }
