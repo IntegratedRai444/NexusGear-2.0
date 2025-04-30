@@ -207,10 +207,10 @@ export class MemStorage implements IStorage {
         isFeatured: true
       },
       {
-        name: "Razer Hammerhead True Wireless Pro",
-        description: "THX® Certified Audio, Active Noise Cancellation, Low-Latency Bluetooth Gaming Earbuds with RGB",
+        name: "ROG Cetra True Wireless Pro",
+        description: "Hi-Res ESS DAC, Active Noise Cancellation, Low-Latency Bluetooth Gaming Earbuds with ROG Signature Design",
         price: 199.99,
-        imageUrl: "https://assets3.razerzone.com/_8P5c2JlcJDJrUFuH0Z4GY_kYIw=/1500x1000/https%3A%2F%2Fhyperx.com%2Fcdn%2Fshop%2Fproducts%2Fhyperx_cloud_earbuds_1.png",
+        imageUrl: "https://gaming-earbuds.jpg",
         category: "earbuds",
         rating: 4,
         reviewCount: 18,
