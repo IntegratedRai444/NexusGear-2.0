@@ -210,7 +210,7 @@ export class MemStorage implements IStorage {
         name: "ROG Cetra True Wireless Pro",
         description: "Hi-Res ESS DAC, Active Noise Cancellation, Low-Latency Bluetooth Gaming Earbuds with ROG Signature Design",
         price: 199.99,
-        imageUrl: "https://gaming-earbuds.jpg",
+        imageUrl: "https://i.imgur.com/0nH8CQQ.jpg",
         category: "earbuds",
         rating: 4,
         reviewCount: 18,
