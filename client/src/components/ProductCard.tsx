@@ -57,6 +57,11 @@ export default function ProductCard({ product }: ProductCardProps) {
             <img 
               src={product.imageUrl} 
               alt={product.name} 
+              loading="lazy"
+              onError={(e) => {
+                e.currentTarget.src = "/default-product.png";
+                e.currentTarget.onerror = null;
+              }}
               className="w-full h-52 object-cover object-center transition-all duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

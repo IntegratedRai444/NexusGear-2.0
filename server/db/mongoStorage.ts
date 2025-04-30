@@ -195,15 +195,13 @@ export class MongoStorage implements IStorage {
 
   async getCartWithProducts(sessionId: string, userId?: number): Promise<{cartItem: CartItemType, product: ProductType}[]> {
     try {
-      const query: any = {};
-      if (userId) {
-        query.userId = userId;
-      } else {
-        query.sessionId = sessionId;
-      }
+      const query: any = userId ? { userId } : { sessionId };
       
-      const cartItems = await CartItem.find(query);
-      const result: {cartItem: CartItemType, product: ProductType}[] = [];
+      const cartItems = await CartItem.find(query).populate('productId');
+      return cartItems.map(item => ({
+        cartItem: this.mapCartItemToSchema(item),
+        product: this.mapProductToSchema(item.productId)
+      }));
       
       for (const item of cartItems) {
         const product = await Product.findById(item.productId);

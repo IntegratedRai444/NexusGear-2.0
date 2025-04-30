@@ -198,7 +198,7 @@ export class MemStorage implements IStorage {
         name: "ASUS ROG Strix G16 Gaming Laptop",
         description: "16-inch 240Hz, Intel Core i7, NVIDIA RTX 4070, 16GB DDR5, 1TB SSD",
         price: 1499.99,
-        imageUrl: "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?q=80&w=600&auto=format&fit=crop",
+        imageUrl: "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=600&auto=format&fit=crop",
         category: "laptops",
         rating: 5,
         reviewCount: 42,
@@ -207,10 +207,10 @@ export class MemStorage implements IStorage {
         isFeatured: true
       },
       {
-        name: "Razer Hammerhead True Wireless Earbuds",
-        description: "Low-Latency Bluetooth Gaming Earbuds with Noise Cancellation and RGB",
-        price: 89.99,
-        imageUrl: "https://images.unsplash.com/photo-1600086827875-a63b01f1335c?q=80&w=600&auto=format&fit=crop",
+        name: "Razer Hammerhead True Wireless Pro",
+        description: "THX® Certified Audio, Active Noise Cancellation, Low-Latency Bluetooth Gaming Earbuds with RGB",
+        price: 199.99,
+        imageUrl: "https://assets3.razerzone.com/_8P5c2JlcJDJrUFuH0Z4GY_kYIw=/1500x1000/https%3A%2F%2Fhyperx.com%2Fcdn%2Fshop%2Fproducts%2Fhyperx_cloud_earbuds_1.png",
         category: "earbuds",
         rating: 4,
         reviewCount: 18,
