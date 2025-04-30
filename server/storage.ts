@@ -546,7 +546,7 @@ export class MemStorage implements IStorage {
 import { MongoStorage } from './db/mongoStorage';
 
 // Use MongoDB storage implementation if MONGO_ENABLED=true, otherwise use in-memory storage
-const useMongoDb = process.env.MONGO_ENABLED === 'true';
+const useMongoDb = process.env.MONGO_ENABLED !== 'false';
 
 export const storage: IStorage = useMongoDb 
   ? new MongoStorage() 
