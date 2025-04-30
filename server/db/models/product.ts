@@ -59,7 +59,7 @@ const productSchema = new Schema<IProduct>({
     type: Boolean,
     default: true
   },
-  isNew: {
+  isNewProduct: {
     type: Boolean,
     default: false
   },
@@ -71,6 +71,8 @@ const productSchema = new Schema<IProduct>({
     type: Date,
     default: Date.now
   }
+}, {
+  suppressReservedKeysWarning: true
 });
 
 // Create and export the Product model
